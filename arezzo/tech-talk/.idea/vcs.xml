@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/jenkins-mulitbranch-pipeline" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jenkins-mulitbranch-pipeline/data/jenkins/caches/git-5ef5466ad850f136173cefefc4277c04" vcs="Git" />
+  </component>
+</project>
