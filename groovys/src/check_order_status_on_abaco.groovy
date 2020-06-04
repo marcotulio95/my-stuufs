@@ -8,7 +8,3 @@ final ArrayOfString pedidosArray = new ArrayOfString();
 pedidosArray.getString().addAll(Arrays.asList('00018010'));
 
 abacosPlatformServiceWrapper.pedidoExiste( pedidosArray , 'arezzo' );
-
-
-
-http://wsarezzohom.apiecomm.com.br:8090/IntegradorAbacos.asmx -> actual
