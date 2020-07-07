@@ -1,0 +1,12 @@
+$currency=sessionCurrency(isocode)[default='BRL']
+$language=sessionLanguage(isocode)[default='pt']
+$acceptTerms=acceptTerms[default=true]
+$passwordEncoding=md5
+$defaultPassword=1234
+$setPassword=@password[translator=de.hybris.platform.impex.jalo.translators.ConvertPlaintextToEncodedUserPasswordTranslator][default='$passwordEncoding:$defaultPassword']
+
+INSERT_UPDATE Employee;UID[unique=true];$setPassword;description;name;groups(uid);sessionLanguage(isocode);sessionCurrency(isocode)
+;marco.sac;;"Customer service agente";"Marco Tulio";customersupportagentgroup;pt;BRL
+;maicon.sac;;"Customer service agente";"Maicon";customersupportagentgroup;pt;BRL
+;cristian.sac;;"Customer service agente";"Cristian";customersupportagentgroup;pt;BRL
+;gabriel.sac;;"Customer service agente";"Gabriel";customersupportagentgroup;pt;BRL

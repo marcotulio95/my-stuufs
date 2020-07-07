@@ -1,0 +1,15 @@
+$lang=pt
+$catalog=Online
+$contentCatalog=outstoreContentCatalog
+$productCatalog=outstoreProductCatalog
+$productCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$productCatalog]),CatalogVersion.version[default=Online])[default=$productCatalog:Online]
+$catalogVersion=catalogVersion(catalog(id[default=$productCatalog]),version[default=$catalog])[unique=true,default=$productCatalog:$catalog]
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=$catalog])[default=$contentCatalog:$catalog]
+$categories=target(code, $catalogVersion)[unique=true]
+$supercategories=source(code, $catalogVersion)[unique=true]
+
+INSERT_UPDATE Category;code[unique=true];$catalogVersion;supercategories(code,$catalogVersion);bcMainCategory;allowedPrincipals(uid)[default='customergroup']
+;EMBALAGEM;;ROOT;1;
+
+UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang];description[lang=$lang]
+;EMBALAGEM;;Embalagem;Embalagem

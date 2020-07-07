@@ -1,0 +1,2 @@
+INSERT_UPDATE ArezzoCityLocation;cep[unique=true];federalState(code);locationType(code);cityName;shortName;longName;latitude;longitude
+;12249000;SP;RUA;São josé dos campos;São francisco xavier;são francisco xavier;-22,9121; -45,9596

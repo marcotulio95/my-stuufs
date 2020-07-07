@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "963d3a99-ad42-405e-8f02-511715b35794",
+		"name": "Neoassistant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Corporate Sale",
+			"item": [
+				{
+					"name": "Create return",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Access-Control-Allow-Origin",
+								"value": "*",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"interaction_fields\" : {\n    \"question\":\"Teste de time arezzo\",\n    \"Name\":\"Name\",\n    \"EMail\":\"marco.rodrigues@arezzo.com.br\",\n    \"fieldU\":\"fieldU\",\n    \"fieldA\":\"fieldA\",\n    \"action\":\"action\",\n    \"scr\":\"scr\",\n    \"categ\":\"categ\",\n    \"protocoloFieldC\":\"protocoloFieldC\",\n    \"protocoloFieldE\":\"protocoloFieldE\",\n    \"protocoloFieldF\":\"protocoloFieldF\",\n    \"protocoloFieldH\":\"protocoloFieldH\",\n    \"uFile\":\"uFile\",\n    \"new\":\"new\",\n    \"ad\":\"ad\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HTTPS_BRAND}}.{{URL}}/API/interactions.json",
+							"host": [
+								"{{HTTPS_BRAND}}",
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"interactions.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create sale corpoatee into neoassistant (form-data)",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Access-Control-Allow-Origin",
+								"value": "*",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "interaction_fields[Name]",
+									"value": "Teste de time arezzo",
+									"type": "text"
+								},
+								{
+									"key": "interaction_fields[EMail]",
+									"value": "marco.rodrigues@arezzo.com.br",
+									"type": "text"
+								},
+								{
+									"key": "interaction_fields[FieldU]",
+									"value": "790.274.920-69",
+									"description": "CPF",
+									"type": "text"
+								},
+								{
+									"key": "interaction_fields[FieldA]",
+									"value": "051999999999",
+									"description": "Telefone",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "interaction_fields[ProtocoloFieldC]",
+									"value": "051999999999",
+									"description": "Telefone",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "interaction_fields[ProtocoloFieldC]",
+									"value": "Motivo",
+									"description": "Motivo - Não é Obrigatório",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "interaction_fields[category_id]",
+									"value": "359697",
+									"description": "ID da Categoria - Não é Obrigatório, porém o protocolo sem categoria, todo mundo poderá ver",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "interaction_fields[question]",
+									"value": "Mensagem",
+									"description": "Mensagem",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HTTPS_BRAND}}.{{URL}}/API/interactions.json",
+							"host": [
+								"{{HTTPS_BRAND}}",
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"interactions.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create sale corpoatee into neoassistant (raw)",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Access-Control-Allow-Origin",
+								"value": "*",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"interaction_fields\" : {\n    \"action\" : \"new\",\n    \"src\" : \"ad\",\n    \"question\" : \"Mensagem: Oi -  Turno: Manha\",\n    \"Name\" : \"Lucas\",\n    \"EMail\" : \"teste@email.com\",\n    \"FieldA\" : \"51982449858\",\n    \"ProtocoloFieldA\" : \"Empresa\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HTTPS_BRAND}}.{{URL}}/API/interactions.json",
+							"host": [
+								"{{HTTPS_BRAND}}",
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"interactions.json"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
